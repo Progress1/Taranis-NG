@@ -5,7 +5,7 @@ news item attribute. Creates the rule table and its source-group scoping table, 
 preconfigured patterns, adds the config permissions, and adds the global on/off switch.
 
 Revision ID: d4f1c8a70b62
-Revises: b8d3e6f5a417
+Revises: d5c81f60a473
 Create Date: 2026-08-29 09:00:00.000000
 
 """
@@ -19,7 +19,7 @@ Base = declarative_base()
 
 # revision identifiers, used by Alembic.
 revision = "d4f1c8a70b62"
-down_revision = "b8d3e6f5a417"
+down_revision = "d5c81f60a473"
 branch_labels = None
 depends_on = None
 
