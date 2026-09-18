@@ -12,6 +12,7 @@
 
         <EditableEntityTable
             v-model="rows"
+            v-model:dialog="dialog"
             server
             :items="rows"
             :title="t('attribute_extraction.title')"
@@ -191,6 +192,7 @@
     const rows = ref<ExtractionRule[]>([])
     const loading = ref(false)
     const saving = ref(false)
+    const dialog = ref(false)
     const errorMessage = ref('')
 
     const headers = [
@@ -277,6 +279,7 @@
                 await updateAttributeExtractionRule(payload)
             }
             await loadData()
+            dialog.value = false
         } catch (error) {
             errorMessage.value = String(error)
         } finally {
